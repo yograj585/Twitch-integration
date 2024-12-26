@@ -14,6 +14,7 @@ class TwitchController extends Controller
             'redirect_uri' => env('TWITCH_REDIRECT_URI'),
             'response_type' => 'code',
             'scope' => 'user:read:email',
+            
         ]);
 
         return redirect('https://id.twitch.tv/oauth2/authorize?' . $query);
